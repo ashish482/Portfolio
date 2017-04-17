@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+<link rel="stylesheet" href="{% static 'assets/plugins/bootstrap/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/plugins/blog.css' %}">
+	<title>{% block title %}Blog{% endblock %}</title>
+	<meta charset="utf-8" />
+	{% load bootstrap3 %}
+</head>
+<body>
+<div class="container">
+	<div id="content" class="flex">
+		{% block content %}
+		{% endblock %}
+	</div>
+</div>
+</body>
+</html>

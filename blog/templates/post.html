@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Blog Post</title>
+    {% load static %}
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="{% static 'assets/plugins/bootstrap/css/bootstrap.min.css' %}">
+    <!-- Custom CSS -->
+    <link href="{% static 'assets/css/blog-post.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/css/one.style.css' %}">
+
+	<!-- CSS Footer -->
+	<link rel="stylesheet" href="{% static 'assets/css/footers/footer-v7.css' %}">
+
+	<!-- CSS Implementing Plugins -->
+	<link rel="stylesheet" href="{% static 'assets/plugins/animate.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/plugins/line-icons/line-icons.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/plugins/font-awesome/css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/plugins/pace/pace-flash.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/plugins/owl-carousel/owl.carousel.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/plugins/revolution-slider/rs-plugin/css/settings.css' %}" type="text/css" media="screen">
+	<!--[if lt IE 9]><link rel="stylesheet" href="assets/plugins/revolution-slider/rs-plugin/css/settings-ie8.css" type="text/css" media="screen"><![endif]-->
+
+	<!-- Style Switcher -->
+	<link rel="stylesheet" href="{% static 'assets/css/plugins/style-switcher.css' %}">
+
+	<!-- CSS Theme -->
+	<link rel="stylesheet" href="{% static 'assets/css/theme-colors/default.css' %}" id="style_color">
+	<link rel="stylesheet" href="{% static 'assets/css/theme-skins/one.dark.css' %}">
+
+	<!-- CSS Customization -->
+	<link rel="stylesheet" href="{% static 'assets/css/custom.css' %}">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <body id="body" data-spy="scroll" data-target=".one-page-header" class="demo-lightbox-gallery">
+	<!--=== Header ===-->
+	<nav class="one-page-header navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="menu-container page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<a class="navbar-brand" href="#intro">
+					<span>ASHISH</span>PANDEY
+					<!-- <img src="assets/img/logo1.png" alt="Logo"> -->
+				</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<div class="menu-container">
+					<ul class="nav navbar-nav">
+						<li class="page-scroll home">
+							<a href="/">Home</a>
+						</li>
+                        <li class="page-scroll home">
+							<a href="/blog">Blog</a>
+						</li>
+                    </ul>
+				</div>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+	<!--=== End Header ===-->
+     {% block content %}
+    <!-- Page Content -->
+
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Blog Post Content Column -->
+            <div class="col-lg-8">
+
+                <!-- Blog Post -->
+
+                <!-- Title -->
+                <h1>{{ post }}</h1>
+
+                <!-- Author -->
+                <p class="lead">
+                    by <a target="_blank" href="https://www.facebook.com/ashishcool482">Ashish Pandey</a>
+                </p>
+
+                <!-- Date/Time -->
+                <p><span class="glyphicon glyphicon-time"></span> Posted on <span class="date">{{ post.created }}</span></p>
+
+                <hr>
+
+                <!-- Preview Image -->
+                <img class="img-responsive" src="{{ post.image.url }}" alt="">
+
+                <hr>
+
+                <!-- Post Content -->
+                <p class="lead">{{ post.content }}</p>
+                <hr>
+            </div>
+
+        </div>
+    </div>
+         </div>
+
+    {% endblock %}
+    <div class="copyright-section">
+			<p>2017 &copy; Designed and Edited by Ashish Pandey</p>
+			<ul class="social-icons">
+				<li><a href="https://www.facebook.com/ashishcool482" data-original-title="Facebook" class="social_facebook rounded-x"></a></li>
+				<li><a href="https://twitter.com/ashishcool482" data-original-title="Twitter" class="social_twitter rounded-x"></a></li>
+				<li><a href="https://www.linkedin.com/in/ashish-pandey-0127b9112/" data-original-title="Linkedin" class="social_linkedin rounded-x"></a></li>
+
+			</ul>
+		</div>
+
+    <!-- /.container -->
+<script src="{% static 'assets/plugins/jquery/jquery.min.js' %}"></script>
+	<script src="{% static 'assets/plugins/jquery/jquery-migrate.min.js' %}"></script>
+	<script src="{% static 'assets/plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+
+</body>
+
+</html>

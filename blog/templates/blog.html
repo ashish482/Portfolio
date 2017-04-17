@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'assets/plugins/bootstrap/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/plugins/blog.css' %}">
+{% block title %}Blogs{% endblock %}
+{% block content %}
+<div class="blog">
+<h1><center>BLOGS</center></h1>
+</div>
+{% for post in posts %}
+<div class="post_list">
+	<h2><div class="theme_img"><img src="{{ post.image.url }}" height="auto" width="auto" alt="image"></div><br><a href="{{ post.get_absolute_url }}">{{ post }}</a><br><small>{{ post.created }}</small></h2>
+	<p>{{ post.perex|safe }}</p>
+</div>
+{% endfor %}
+{% endblock %}
